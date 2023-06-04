@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<center>
+
+
+
+  <h2>
+    <label for="og">Ubicación de origen</label>
+    
+  
+  
+  
+  
+  </h2>
+    <select name="og" id='origen'>
+      <option value="Bola">La Bola</option>
+      <option value="BCR">Cajero BCR</option>
+    </select>
+    <h2>
+        <label for="dst">Ubicación destino:</label>
+        </h2>
+        <select name="dst" id='destino'>
+          <option value="Labs">Lab 1, Lab 2, Mini Auditorio</option>
+          <option value="Lab3">Lab 3</option>
+          <option value="Arqui">Lab 210</option>
+        </select>
+    
+        <br><br>
+        <button type="submit" id="btn" name="Enviar">Calcular Ruta</button>
+
+        
+
+        <script>
+           
+           function changeSelection() {
+              document.getElementById('origen').selectedIndex = 0
+            }
+
+
+
+            var boton = document.getElementById('btn');
+
+   
+            //Evento on click en nuestro botón
+            boton.addEventListener("click", function(){ 
+            
+
+
+            var select = document.getElementById('origen');
+            var og = select.options[select.selectedIndex].value;
+
+            var select = document.getElementById('destino');
+            var dst = select.options[select.selectedIndex].value; 
+
+            
+            
+
+          
+            window.location = "Mapas/"+og+"-"+dst+"/"+og+"-"+dst+".html"
+
+
+
+
+
+            }
+            
+            
+            
+
+
+            ); 
+
+        </script>
+
+
+
+
+
+
+        <script>
+
+            function startQRScanner() {
+            var scanner = new Instascan.Scanner({ video: document.getElementById('qrResult') });
+            
+            scanner.addListener('scan', function (content) {
+                alert('Código QR detectado: ' + content);
+                // Aquí puedes realizar acciones con el contenido del código QR
+            });
+            
+            Instascan.Camera.getCameras().then(function (cameras) {
+                if (cameras.length > 0) {
+                    scanner.start(cameras[0]);
+                } else {
+                    console.error('No se encontraron cámaras en el dispositivo.');
+                }
+            }).catch(function (error) {
+                console.error('Error al acceder a las cámaras: ', error);
+            });
+
+
+
+            
+        }
+
+        </script>
+
+
+        <button  onclick='startQRScanner()'>Escanear QR</button>
+
+
+
+        <button class="enlace" role="link" onclick="window.location='http://localhost/PHPPG/scanner.html'">Escanear QR</button>
+        
+
+</center>
+
+
+
+
+
+
+</body>
+</html>
