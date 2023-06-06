@@ -3,7 +3,7 @@
 El proyecto se basa en creación de una aplicación web para ayudar guiar a los usuarios en el Tecnológico de Costa Rica sede San Carlos
 
 ## Instalación
-El objetivo del proyecto es crear un producto fácil de usar para el usuario final por lo que al ser una aplicación web nada mas se necesita un navegador y entrar al link de la pagina
+El objetivo del proyecto es crear un producto fácil de usar para el usuario final por lo que al ser una aplicación web nada mas se necesita un navegador y entrar al link de la pagina[https://leiner117.github.io/IOTProject/]
 
 ## Uso
 La aplicación cuenta con dos paneles para elegir su lugar actual como su lugar de llegada. El usuario deberá ingresar los datos correspondiente y posteriormente dar click en el botón "Calcular ruta", después de esto se le mostrara la ruta solicitada.
