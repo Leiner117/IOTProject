@@ -25,6 +25,10 @@
 <script type="text/javascript">
 function onScanSuccess(qrCodeMessage) {
     document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
+    localStorage.setItem("QR",qrCodeMessage);
+    
+    setTimeout( function() { window.location.href = "index.html"; }, 1000 );
+
 }
 
 function onScanError(errorMessage) {
